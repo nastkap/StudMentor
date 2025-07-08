@@ -1,0 +1,31 @@
+/* public/css/custom.css */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #367ddb;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li::before {
+    content: '\2022';
+    color:#367ddb;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.row {
+    margin-bottom: 20px;
+}

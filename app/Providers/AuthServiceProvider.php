@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Providers;
+
+// use Illuminate\Support\Facades\Gate;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use App\Enums\UserRole;
+use app\Models\User;
+use Illuminate\Support\Facades\Gate;
+
+use SebastianBergmann\Type\VoidType;
+
+class AuthServiceProvider extends ServiceProvider
+{
+    /**
+     * The model to policy mappings for the application.
+     *
+     * @var array<class-string, class-string>
+     */
+    protected $policies = [
+        //
+    ];
+
+    /**
+     * Register any authentication / authorization services.
+     */
+    public function boot()
+    {
+        $this->registerPolicies();
+         $this->defineUserRoleGate('isAdmin', UserRole::ADMIN);
+         $this->defineUserRoleGate('isUser', UserRole::USER);
+    }
+
+    private function defineUserRoleGate(string $name, string $role):  void
+    {
+        Gate::define($name, function(User $user) use ($role){
+            return $user->role==$role;
+        });
+    }
+}
