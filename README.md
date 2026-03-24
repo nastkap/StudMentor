@@ -1,3 +1,17 @@
+# StudMentor: Platforma społecznościowa
+
+> Aplikacja dla studentów do wspólnej nauki, wymiany wiedzy, zadawania pytań i udostępniania materiałów.
+
+Platforma webowa oparta na wzorcu architektonicznym MVC, stworzona w celu ułatwienia komunikacji w środowisku akademickim.
+
+## Główne wyzwanie
+Zapewnienie bezpieczeństwa danych, obsługa złożonej logiki komunikacji między użytkownikami oraz stworzenie elastycznego i czytelnego interfejsu.
+
+## Rozwiązanie
+- Wdrożenie systemu z podziałem ról i uprawnień.
+- Zabezpieczenie formularzy za pomocą zaawansowanej walidacji danych.
+- Opracowanie skalowalnego systemu zarządzania treścią (CMS) dopasowanego do potrzeb platformy edukacyjnej.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
